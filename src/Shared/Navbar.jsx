@@ -4,17 +4,26 @@ import logo from '../assets/Logo/LogoAll.jpg'
 
 const Navbar = () => {
 
+    const handleScroll = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     const links = <>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>About</Link></li>
-        <li><Link to='/'>Skills</Link></li>
+        <li><Link to="/" onClick={() => handleScroll("home")}>Home</Link></li>
+        <li><Link to="/" onClick={() => handleScroll("about")}>About</Link></li>
+        <li><Link to="/" onClick={() => handleScroll("skills")}>Skills</Link></li>
         <li><Link to='/'>Education</Link></li>
-        <li><Link to='/'>Project</Link></li>
-        <li><Link to='/'>Contact</Link></li>
+        <li><Link to="/" onClick={() => handleScroll("project")}>Project</Link></li>
+        <li><Link to="/" onClick={() => handleScroll("contact")}>Contact</Link></li>
     </>
+    // style={{ backgroundColor: "rgba(255, 167, 38, 0.7)" }}
+
     return (
         <div>
-            <div className="navbar fixed z-10 text-white" style={{ backgroundColor: "rgba(255, 167, 38, 0.7)" }} >
+            <div className="navbar fixed z-10 text-white bg-gray-600"  >
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +49,7 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">
                         <img className='w-6 h-6' src={logo} alt="" />
                         <span className='font-bold text-white'>Abir</span>
-                        </a>
+                    </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -51,6 +60,14 @@ const Navbar = () => {
                     <a className="btn">Resume</a>
                 </div>
             </div>
+
+                {/* <li><Link to="/" onClick={() => handleScroll("home")}>Home</Link></li>
+                <li><Link to="/" onClick={() => handleScroll("about")}>About</Link></li>
+                <li><Link to="/" onClick={() => handleScroll("skills")}>Skills</Link></li>
+                <li><Link to="/" onClick={() => handleScroll("education")}>Education</Link></li>
+                <li><Link to="/" onClick={() => handleScroll("project")}>Project</Link></li>
+                <li><Link to="/" onClick={() => handleScroll("contact")}>Contact</Link></li> */}
+
         </div>
     );
 };

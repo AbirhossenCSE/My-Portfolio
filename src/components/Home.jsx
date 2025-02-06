@@ -4,8 +4,8 @@ import abirImg from '../assets/Pic/Abir- (new).jpg';
 
 const Home = () => {
     return (
-        <div>
-            <div className="hero min-h-96">
+        <div id="home">
+            <div className="hero min-h-96 py-16 px-6 lg:px-20 bg-gray-800 text-white">
                 <div className="hero-content flex-col lg:flex-row-reverse justify-between gap-10 lg:gap-20">
                     
                     {/* Right Section - Image */}
@@ -32,13 +32,13 @@ const Home = () => {
                         </motion.h1>
 
                         <motion.h1
-                            className="text-4xl font-bold">Frontend Website Developer
+                            className="text-4xl font-bold">Web Developer
                         </motion.h1>
 
                         <p className="py-6 text-xl">
                             Passionate web developer with a degree in Computer Science & Engineering and hands-on experience in developing dynamic web applications.
                         </p>
-                        <button className="btn">Resume</button>
+                        <button className="btn border-0 bg-blue-600 text-white">Hire Me</button>
                     </div>
 
                 </div>
