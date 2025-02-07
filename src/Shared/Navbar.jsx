@@ -16,11 +16,10 @@ const Navbar = () => {
         <li><Link to="/" onClick={() => handleScroll("home")}>Home</Link></li>
         <li><Link to="/" onClick={() => handleScroll("about")}>About</Link></li>
         <li><Link to="/" onClick={() => handleScroll("skills")}>Skills</Link></li>
-        <li><Link to='/'>Education</Link></li>
+        <li><Link to='/' onClick={() => handleScroll("education")}>Education</Link></li>
         <li><Link to="/" onClick={() => handleScroll("projects")}>Project</Link></li>
         <li><Link to="/" onClick={() => handleScroll("contact")}>Contact</Link></li>
     </>
-    // style={{ backgroundColor: "rgba(255, 167, 38, 0.7)" }}
 
     return (
         <div>

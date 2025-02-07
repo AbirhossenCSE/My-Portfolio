@@ -1,7 +1,7 @@
 import React from 'react';
 import { easeOut, motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
-import abirImg from '../assets/Pic/Abir- (new).jpg';
+import abirImg from '../assets/Pic/Abir-home.png';
 
 const Home = () => {
     return (
@@ -13,9 +13,9 @@ const Home = () => {
                     <div className='flex-1 flex justify-center'>
                         <motion.img
                             src={abirImg}
-                            animate={{ x: [-5, 50, -5] }} // Left-Right-Left Animation
+                            animate={{ x: [-5, 15, -5] }}
                             transition={{ duration: 5, repeat: Infinity, ease: easeOut }}
-                            className="max-w-sm w-72 mt-20 shadow-2xl rounded-lg" />
+                            className="max-w-sm w-72 mt-20 rounded-lg" />
                     </div>
 
                     {/* Left Section - Text */}
@@ -23,7 +23,7 @@ const Home = () => {
                         <h1
                             className="text-5xl font-bold my-4 mt-20 uppercase">
                             <motion.span
-                                animate={{ color: ['#ecff33', '#33ffe3', '#ff6133'] }}
+                                animate={{ color: ['#FFA500', '#FFFFFF', '#8898aa'] }}
                                 transition={{ duration: 2, repeat: Infinity }}
                             >
                                 Abir
