@@ -46,12 +46,11 @@ const About = () => {
                         As a passionate <strong>Full-Stack Web Developer</strong>, I specialize in building interactive, user-friendly applications with a focus on performance and modern design.
                     </p>
                     <p className="mt-4 p-4 text-lg leading-relaxed text-justify">
-                        My expertise includes **JavaScript, React.js, React Router, Tailwind CSS, DaisyUI, Node.js, Express.js, and MongoDB**.
-                        I love crafting seamless digital experiences by combining my problem-solving skills with cutting-edge technologies.
+                        I am proficient in HTML5, CSS3, and JavaScript (ES6+) for building responsive, user-friendly web applications. Skilled in Tailwind CSS, DaisyUI, and integrating SweetAlert2 for enhanced UI/UX. Comfortable with basic back-end tasks, RESTful API integration, and using bash for terminal operations. Experienced in Git/GitHub for version control and committed to continuous learning to excel in remote web development roles.
                     </p>
 
                     {/* Skills and More */}
-                    <div className="mt-6 flex flex-wrap justify-center lg:justify-start gap-4">
+                    <div className="mt-6 p-4 flex flex-wrap justify-center lg:justify-start gap-4">
                         <span className="px-4 py-2 bg-gray-700 text-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/50">JavaScript</span>
                         <span className="px-4 py-2 bg-gray-700 text-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/50">React.js</span>
                         <span className="px-4 py-2 bg-gray-700 text-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:shadow-gray-500/50">HTML5</span>

@@ -57,18 +57,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {/* Social Media Links */}
-                    <div className="flex gap-6 items-center mr-3">
-                        <a href="https://github.com/AbirhossenCSE/" target="_blank" rel="noopener noreferrer">
-                            <FaGithub className="text-white text-3xl hover:text-gray-400 transition duration-300" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/abir-hossen-9a627b257/" target="_blank" rel="noopener noreferrer">
-                            <FaLinkedin className="text-blue-400 text-3xl hover:text-blue-300 transition duration-300" />
-                        </a>
-                        <a href="https://www.facebook.com/abir.mondol.503" target="_blank" rel="noopener noreferrer">
-                            <FaFacebook className="text-blue-600 text-3xl hover:text-blue-500 transition duration-300" />
-                        </a>
-                    </div>
+                    <a href="https://drive.google.com/uc?export=download&id=1mEteilgMIaSS6zYGnJkQ1vp3iCL69TS5"
+                        className="btn border-0 bg-gray-500 mr-4 text-white "
+                        download>
+                        Download Resume
+                    </a>
                 </div>
             </div>
 

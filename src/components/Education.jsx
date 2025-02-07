@@ -18,7 +18,7 @@ const Education = () => {
                     Educational Qualification
                 </motion.h2>
                 <motion.div 
-                    className="bg-gray-800 p-6 rounded-lg shadow-lg text-left"
+                    className="bg-gray-800 p-6 rounded-lg shadow-lg text-left transition duration-300 hover:scale-105"
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
