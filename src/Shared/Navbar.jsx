@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/Logo/LogoAll.jpg'
+import { FaFacebook, FaFacebookF, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
 
@@ -16,7 +17,7 @@ const Navbar = () => {
         <li><Link to="/" onClick={() => handleScroll("about")}>About</Link></li>
         <li><Link to="/" onClick={() => handleScroll("skills")}>Skills</Link></li>
         <li><Link to='/'>Education</Link></li>
-        <li><Link to="/" onClick={() => handleScroll("project")}>Project</Link></li>
+        <li><Link to="/" onClick={() => handleScroll("projects")}>Project</Link></li>
         <li><Link to="/" onClick={() => handleScroll("contact")}>Contact</Link></li>
     </>
     // style={{ backgroundColor: "rgba(255, 167, 38, 0.7)" }}
@@ -57,16 +58,20 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Resume</a>
+                    {/* Social Media Links */}
+                    <div className="flex gap-6 items-center mr-3">
+                        <a href="https://github.com/AbirhossenCSE/" target="_blank" rel="noopener noreferrer">
+                            <FaGithub className="text-white text-3xl hover:text-gray-400 transition duration-300" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/abir-hossen-9a627b257/" target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin className="text-blue-400 text-3xl hover:text-blue-300 transition duration-300" />
+                        </a>
+                        <a href="https://www.facebook.com/abir.mondol.503" target="_blank" rel="noopener noreferrer">
+                            <FaFacebook className="text-blue-600 text-3xl hover:text-blue-500 transition duration-300" />
+                        </a>
+                    </div>
                 </div>
             </div>
-
-                {/* <li><Link to="/" onClick={() => handleScroll("home")}>Home</Link></li>
-                <li><Link to="/" onClick={() => handleScroll("about")}>About</Link></li>
-                <li><Link to="/" onClick={() => handleScroll("skills")}>Skills</Link></li>
-                <li><Link to="/" onClick={() => handleScroll("education")}>Education</Link></li>
-                <li><Link to="/" onClick={() => handleScroll("project")}>Project</Link></li>
-                <li><Link to="/" onClick={() => handleScroll("contact")}>Contact</Link></li> */}
 
         </div>
     );

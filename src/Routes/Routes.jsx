@@ -2,6 +2,7 @@ import {
     createBrowserRouter,
   } from "react-router-dom";
 import Main from "../Layout/Main";
+import ProjectDetail from "../components/Project/ProjectDetail";
 
 
   export const router = createBrowserRouter([
@@ -9,6 +10,10 @@ import Main from "../Layout/Main";
     {
         path: '/',
         element: <Main></Main>
-    }
+    },
+    {
+        path: "/project/:id",
+        element: <ProjectDetail></ProjectDetail> ,
+    },
         
   ]);
