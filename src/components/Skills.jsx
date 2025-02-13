@@ -15,7 +15,7 @@ const skills = [
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
-    { name: "Firebase", icon: <SiFirebase className="text-orange-500" /> },
+    { name: "Firebase", icon: <SiFirebase className="text-orange-500" /> }, // Fixed Firebase icon
     { name: "Vercel", icon: <SiVercel className="text-white" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
     { name: "Express.js", icon: <SiExpress className="text-gray-500" /> },
@@ -45,18 +45,19 @@ const Skills = () => {
                 </motion.h2>
 
                 {/* Skills Grid */}
-                <div className="grid md:grid-cols-5 gap-6 text-center ">
+                <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
                     {skills.map((skill, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: i * 0.1 }}
-                            className="flex flex-col bg-gray-900 items-center gap-2 p-6 rounded-xl transition-all duration-300 
-                                   hover:shadow-xl hover:shadow-gray-500/50 hover:scale-110"
+                            className="flex flex-col items-center gap-4 p-8 rounded-xl transition-all duration-300 
+                                   bg-gradient-to-br from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700
+                                   hover:shadow-2xl hover:shadow-gray-500/30 hover:scale-105 border border-gray-700"
                         >
                             <div className="text-5xl">{skill.icon}</div>
-                            <span className="font-medium">{skill.name}</span>
+                            <span className="font-medium text-lg">{skill.name}</span>
                         </motion.div>
                     ))}
                 </div>

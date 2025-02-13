@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
 import { motion, useInView } from "framer-motion";
 
@@ -43,10 +43,27 @@ const projects = [
 
 const Projects = () => {
     const headingRef = useRef(null);
+    const modalRef = useRef(null); // Ref for the modal
     const isInView = useInView(headingRef, { triggerOnce: true, threshold: 0.5 });
 
-    // State to track selected project and modal visibility
     const [selectedProject, setSelectedProject] = useState(null);
+
+    // Close modal when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                setSelectedProject(null);
+            }
+        };
+
+        if (selectedProject) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [selectedProject]);
 
     return (
         <div id="projects" className="py-16 px-6 lg:px-20 bg-gray-900 text-white">
@@ -68,7 +85,7 @@ const Projects = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300 
+                            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300
                             relative group overflow-hidden flex flex-col justify-between"
                         >
                             {/* Image */}
@@ -121,8 +138,10 @@ const Projects = () => {
             {/* Modal */}
             {selectedProject && (
                 <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center p-4">
-                    <div className="bg-gray-900 text-white max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 rounded-lg relative">
-
+                    <div
+                        ref={modalRef} // Attach the ref to the modal
+                        className="bg-gray-900 text-white max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 rounded-lg relative"
+                    >
                         {/* Project Title */}
                         <h2 className="text-3xl font-bold mb-4 text-center">{selectedProject.name}</h2>
 
@@ -134,18 +153,16 @@ const Projects = () => {
                         />
 
                         {/* Project Description */}
-                        <p className="text-gray-400">{selectedProject.description}</p>
+                        <p className="text-gray-400"><span className="font-semibold  text-white">Description: </span> {selectedProject.description}</p>
 
                         {/* Challenges Faced */}
-                        <h3 className="text-2xl font-semibold mt-6">Challenges Faced:</h3>
-                        <p className="text-gray-400">{selectedProject?.challenges}</p>
+                        <p className="text-gray-400 my-2"><span className="font-semibold text-white">Challenges Faced:</span> {selectedProject?.challenges}</p>
 
                         {/* Future Plans */}
-                        <h3 className="text-2xl font-semibold mt-6">Future Plans:</h3>
-                        <p className="text-gray-400">{selectedProject?.futurePlans}</p>
+                        <p className="text-gray-400"><span className="font-semibold text-white">Future Plans:</span> {selectedProject?.futurePlans}</p>
 
                         {/* Tech Stack */}
-                        <h3 className="text-xl font-semibold mt-4">Tech Stack:</h3>
+                        <h3 className=" font-semibold mt-4">Tech Stack:</h3>
                         <div className="flex flex-wrap gap-2 mt-2">
                             {selectedProject.techStack.map((tech, index) => (
                                 <span key={index} className="p-2 bg-gray-950 text-white text-sm rounded-md">
@@ -168,24 +185,18 @@ const Projects = () => {
                                 className="px-4 flex items-center gap-2 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition duration-300">
                                 <FaGithub /> GitHub Server
                             </a>
-                        </div>
-
-                        {/* Close Button */}
-                        <div className="mt-6 flex justify-center">
                             <button
                                 className="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300"
                                 onClick={() => setSelectedProject(null)}
                             >
-                                Close
+                                Close Modal
                             </button>
                         </div>
                     </div>
                 </div>
             )}
-
         </div>
     );
 };
 
 export default Projects;
-
