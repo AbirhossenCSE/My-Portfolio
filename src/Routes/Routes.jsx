@@ -11,9 +11,5 @@ import ProjectDetail from "../components/Project/ProjectDetail";
         path: '/',
         element: <Main></Main>
     },
-    {
-        path: "/project/:id",
-        element: <ProjectDetail></ProjectDetail> ,
-    },
         
   ]);

@@ -42,6 +42,13 @@ const ProjectDetail = () => {
     const { id } = useParams();
     const project = projectData[id];
 
+    const handleScroll = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     if (!project) {
         return <div className="text-center text-white mt-10">Project Not Found</div>;
     }

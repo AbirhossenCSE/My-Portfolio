@@ -5,7 +5,7 @@ import abirImg from '../assets/Pic/Abir-home.png';
 
 const Home = () => {
 
-    const texts = ["Web Developer", "Frontend Developer", "MERN Developer"];
+    const texts = ["Web Developer", "Frontend Developer", "MERN Stack Developer"];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -43,7 +43,7 @@ const Home = () => {
 
                         <motion.h1
                             className="text-2xl font-bold"
-                            key={index} // Animate when index changes
+                            key={index} 
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
@@ -57,10 +57,11 @@ const Home = () => {
                         </p>
 
                         {/* Hire Me Button */}
-                        <a href="https://drive.google.com/uc?export=download&id=1mEteilgMIaSS6zYGnJkQ1vp3iCL69TS5"
-                            className="btn border-0 bg-gray-700 text-white my-6"
+
+                        <a href="https://drive.google.com/uc?export=download&id=1Azfyqm_hpW1ojrKnH6kniz_3Wf0_lLV5"
+                            className="btn border-0 bg-gray-700 text-white my-6 px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300"
                             download>
-                            Hire Me
+                            Download Resume
                         </a>
 
                         {/* Social Media Links */}

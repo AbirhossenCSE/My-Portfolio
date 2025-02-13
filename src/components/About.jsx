@@ -19,7 +19,7 @@ const About = () => {
                         animate={{ x: [-5, 15, -5] }}
                         transition={{ duration: 5, repeat: Infinity, ease: easeOut }}
                         alt="Abir Hossen - Frontend Developer"
-                        className="w-full lg:w-full h-96 rounded-xl transition-transform duration-300 hover:scale-105"
+                        className="w-full lg:w-full h-96 rounded-xl transition-transform duration-300 hover:scale-105  "
                     />
                 </div>
 
