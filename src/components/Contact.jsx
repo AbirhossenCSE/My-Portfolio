@@ -25,7 +25,7 @@ const Contact = () => {
             text: "Thank you for reaching out. I'll get back to you soon.",
             showConfirmButton: false,
             timer: 1500
-          });
+        });
         setFormData({ name: "", email: "", message: "" });
     };
 
@@ -87,46 +87,46 @@ const Contact = () => {
 
                     {/* Send Message Form */}
                     <div className="bg-gray-800 p-6 rounded-lg shadow-md">
-            <h3 className="text-2xl font-semibold mb-4 text-center">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    required
-                />
+                        <h3 className="text-2xl font-semibold mb-4 text-center">Send a Message</h3>
+                        <form onSubmit={handleSubmit} className="space-y-4">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required
+                            />
 
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    required
-                />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required
+                            />
 
-                <textarea
-                    name="message"
-                    placeholder="Your Message"
-                    rows="4"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    required
-                ></textarea>
+                            <textarea
+                                name="message"
+                                placeholder="Your Message"
+                                rows="4"
+                                value={formData.message}
+                                onChange={handleChange}
+                                className="w-full p-3 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required
+                            ></textarea>
 
-                <button
-                    type="submit"
-                    className="w-full px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
-                >
-                    Send Message
-                </button>
-            </form>
-        </div>
+                            <button
+                                type="submit"
+                                className="w-full px-4 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+                            >
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
