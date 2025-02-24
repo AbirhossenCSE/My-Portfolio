@@ -54,7 +54,7 @@ const About = () => {
                         I am proficient in HTML5, CSS3, and JavaScript (ES6+) for building responsive, user-friendly web applications. Skilled in Tailwind CSS, DaisyUI, and integrating SweetAlert2 for enhanced UI/UX. Comfortable with basic back-end tasks, RESTful API integration, and using bash for terminal operations. Experienced in Git/GitHub for version control and committed to continuous learning to excel in remote web development roles.
                     </p>
 
-                    {/* Skills and More */}
+                    {/* Skills */}
                     <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                         {[
                             "JavaScript", "React.js", "HTML5", "CSS3", "Tailwind CSS",
