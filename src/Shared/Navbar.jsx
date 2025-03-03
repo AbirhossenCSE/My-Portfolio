@@ -4,7 +4,7 @@ import logo from '../assets/Logo/Abir-formal.jpg';
 import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
-    
+
     const handleScroll = (id) => {
         const element = document.getElementById(id);
         if (element) {
@@ -22,13 +22,13 @@ const Navbar = () => {
     </>;
 
     return (
-        <nav className="fixed top-0 w-full bg-gray-700 bg-opacity-90 shadow-md z-50">
+        <nav className="fixed top-0 w-full bg-gray-950  bg-opacity-70 shadow-md z-50">
             <div className="container mx-auto flex items-center justify-between py-3 px-6">
-                
+
                 {/* Logo Section */}
-                <div className="flex lg:ml-20 items-center">
-                    <img className="w-8 h-8 mr-3" src={logo} alt="Logo" />
-                    <span className="text-white font-bold text-2xl">Abir Hossen</span>
+                <div className="flex lg:ml-20 items-center cursor-pointer" onClick={() => handleScroll("home")}>
+                    <img className="w-8 h-8 mr-2" src={logo} alt="Logo" />
+                    <span className="text-3xl bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent opacity-80 font-bold transition-all duration-300 hover:opacity-100 focus:outline-none border-none">Abir Hossen</span>
                 </div>
 
                 {/* Desktop Menu */}
@@ -42,8 +42,8 @@ const Navbar = () => {
                         <button tabIndex={0} className="btn btn-ghost">
                             <FaBars className="text-2xl text-white" />
                         </button>
-                        <ul 
-                            tabIndex={0} 
+                        <ul
+                            tabIndex={0}
                             className="menu menu-sm dropdown-content right-0 mt-3 w-52 p-2 shadow-lg bg-gray-800 text-white rounded-box z-50"
                         >
                             {links}

@@ -17,13 +17,13 @@ const Home = () => {
     return (
         <div id="home" className="relative overflow-hidden">
             {/* Background Animation */}
-            <motion.div
+            {/* <motion.div
                 className="absolute inset-0 z-0"
                 animate={{
                     background: [
-                        'linear-gradient(45deg, #374151, #1f2937)', // gray-700 to gray-800
-                        'linear-gradient(45deg, #1f2937, #374151)', // gray-800 to gray-700
-                        'linear-gradient(45deg, #374151, #1f2937)', // gray-700 to gray-800
+                        'linear-gradient(45deg, #374151, #1f2937)', 
+                        'linear-gradient(45deg, #1f2937, #374151)',
+                        'linear-gradient(45deg, #374151, #1f2937)', 
                     ],
                 }}
                 transition={{
@@ -31,7 +31,7 @@ const Home = () => {
                     repeat: Infinity,
                     repeatType: 'mirror',
                 }}
-            />
+            /> */}
 
             <div className="hero min-h-screen py-16 px-6 lg:px-20 text-white relative z-10">
                 <div className="hero-content flex-col lg:flex-row-reverse justify-between gap-10 lg:gap-20 max-w-6xl mx-auto">
@@ -61,13 +61,7 @@ const Home = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <h1 className="text-5xl font-bold mb-4 uppercase">
-                            <motion.span
-                                animate={{ color: ['#FFA500', '#FFFFFF', '#8898aa'] }}
-                                transition={{ duration: 2, repeat: Infinity }}
-                            >
-                                Abir
-                            </motion.span> Hossen
+                        <h1 className="text-5xl font-bold mb-4 uppercase bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent opacity-80 transition-all duration-300 hover:opacity-100 focus:outline-none border-none">Abir Hossen
                         </h1>
 
                         <AnimatePresence mode="wait">

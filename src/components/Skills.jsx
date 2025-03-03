@@ -30,7 +30,7 @@ const Skills = () => {
     const isInView = useInView(headingRef, { triggerOnce: true, threshold: 0.5 });
 
     return (
-        <div id="skills" className="py-16 px-6 lg:px-20 bg-gray-800 text-white">
+        <div id="skills" className="py-16 px-6 lg:px-20 text-white">
             <div className="max-w-6xl mx-auto">
 
                 {/* Animated Heading */}
@@ -52,9 +52,9 @@ const Skills = () => {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: i * 0.1 }}
-                            className="flex flex-col items-center gap-4 p-8 rounded-xl transition-all duration-300 
-                                   bg-gradient-to-br from-gray-900 to-gray-800 hover:from-gray-800 hover:to-gray-700
-                                   hover:shadow-2xl hover:shadow-gray-500/30 hover:scale-105 border border-gray-700"
+                            className="flex flex-col items-center       gap-4     p-8 rounded-xl transition-all duration-300 
+                                bg-gradient-to-br from-gray-900/80 to-gray-800/80 hover:from-gray-800/95 hover:to-gray-700/95
+                                hover:shadow-2xl hover:shadow-gray-500/30 hover:scale-105 border border-gray-700"
                         >
                             <div className="text-5xl">{skill.icon}</div>
                             <span className="font-medium text-lg">{skill.name}</span>

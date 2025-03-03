@@ -66,7 +66,7 @@ const Projects = () => {
     }, [selectedProject]);
 
     return (
-        <div id="projects" className="py-16 px-6 lg:px-20 bg-gray-900 text-white">
+        <div id="projects" className="py-16 px-6 lg:px-20  text-white">
             <div className="max-w-6xl mx-auto">
                 <motion.h2
                     ref={headingRef}

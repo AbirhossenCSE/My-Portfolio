@@ -10,7 +10,7 @@ import Education from '../components/Education';
 
 const Main = () => {
     return (
-        <div>
+        <div className='bg-gradient-to-b from-black via-[#110816] to-[#3e237e] bg-fixed text-white'>
             <Navbar></Navbar>
             <Home></Home>
             <About></About>

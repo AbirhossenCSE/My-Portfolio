@@ -7,7 +7,7 @@ const Education = () => {
     const isInView = useInView(headingRef, { triggerOnce: true, threshold: 0.5 });
 
     return (
-        <div id="education" className="py-16 px-6 lg:px-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+        <div id="education" className="py-16 px-6 lg:px-20  text-white">
             <div className="max-w-4xl mx-auto text-center">
                 {/* Section Title */}
                 <motion.h2
