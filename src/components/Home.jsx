@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { easeOut, motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import abirImg from '../assets/Pic/Abir-home.png';
+import { Typewriter } from 'react-simple-typewriter';
+
 
 const Home = () => {
     const texts = ["Web Developer", "Frontend Developer", "MERN Stack Developer"];
@@ -64,7 +66,7 @@ const Home = () => {
                         <h1 className="text-5xl font-bold mb-4 uppercase bg-gradient-to-r from-blue-600 to-pink-600 bg-clip-text text-transparent opacity-80 transition-all duration-300 hover:opacity-100 focus:outline-none border-none">Abir Hossen
                         </h1>
 
-                        <AnimatePresence mode="wait">
+                        {/* <AnimatePresence mode="wait">
                             <motion.h1
                                 className="text-2xl font-bold mb-6"
                                 key={index}
@@ -75,7 +77,19 @@ const Home = () => {
                             >
                                 {texts[index]}
                             </motion.h1>
-                        </AnimatePresence>
+                        </AnimatePresence> */}
+
+                        <p className="text-2xl lg:text-3xl text-blue-400 mt-5 py-3 rounded-2xl backdrop-blur-md  my-4">
+                            <Typewriter
+                                words={['Front End Developer', 'MERN Stack Developer', 'Full Stack Developer', 'React.js Developer']}
+                                loop={true}
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={90}
+                                deleteSpeed={70}
+                                delaySpeed={1000}
+                            />
+                        </p>
 
                         <p className="text-xl mb-8">
                             Passionate web developer with a degree in Computer Science & Engineering and hands-on experience in developing dynamic web applications.
