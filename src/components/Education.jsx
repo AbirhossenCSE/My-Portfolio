@@ -33,7 +33,7 @@ const Education = () => {
                             {educationData.map((edu, index) => (
                                 <div
                                     key={index}
-                                    className="relative group rounded-lg transition-all duration-[1500ms] ease-in-out bg-gradient-to-b from-[#4a326f] via-[#3a1f4f] to-[#24144d] hover:from-purple-400 hover:via-[#7e207c] hover:to-[#400bc5] bg-fixed text-white hover:shadow-xl"
+                                    className="relative group rounded-lg transition-all duration-[1000ms] ease-in-out bg-gradient-to-b from-[#4a326f] via-[#3a1f4f] to-[#24144d] hover:scale-110 text-white hover:shadow-xl"
                                 >
                                     {/* Card Content */}
                                     <div className="relative rounded-lg bg-transparent p-8 transition-all duration-300 backdrop-blur-lg">

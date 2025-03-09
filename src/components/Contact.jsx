@@ -82,7 +82,7 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 100 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 1.2, ease: 'easeOut' }}
-                        className="backdrop-blur-lg p-8 rounded-2xl shadow-xl"
+                        className="shadow-xl"
                     >
                         <h3 className="text-3xl font-bold mb-6 text-center">Send Message</h3>
                         <form onSubmit={handleSubmit} className="space-y-4">

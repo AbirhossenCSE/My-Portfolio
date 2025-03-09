@@ -17,6 +17,18 @@ const projects = [
     },
     {
         id: 2,
+        name: "Task Management System",
+        image: "https://i.ibb.co.com/tTLBMbDd/Task-Management-System.jpg",
+        techStack: ["React.js", "Firebase", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+        description: "A simple and efficient Task Management Application built with React, Vite, Firebase authentication, and drag-and-drop functionality for seamless task organization.",
+        liveLink: "https://simple-firebase-df58a.web.app/",
+        githubLink: "https://github.com/AbirhossenCSE/Job-Task-Client",
+        githubLinkServer: "https://github.com/AbirhossenCSE/Job-Task-Server",
+        challenges: "In Task Management App project, I faced a challenge with implementing real-time drag-and-drop functionality while keeping the database synchronized. To solve this, I used React DnD for the frontend and WebSockets for instant database updates. After testing and debugging, Now successfully ensured smooth reordering of tasks, which improved the user experience significantly.",
+        futurePlans: "Integrating a chatbot for instant task management advice."
+    },
+    {
+        id: 3,
         name: "Food Planet",
         image: "https://i.ibb.co.com/WNCrjp9z/Rmp.jpg",
         techStack: ["React.js", "Node.js", "Express.js", "MongoDB"],
@@ -28,10 +40,10 @@ const projects = [
         futurePlans: "Adding AI-based product recommendations."
     },
     {
-        id: 3,
+        id: 4,
         name: "Sports Equipment Store",
         image: "https://i.ibb.co.com/yBsNb4pc/SES.jpg",
-        techStack: ["React.js", "Firebase", "Tailwind CSS"],
+        techStack: ["React.js", "Firebase", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
         description: "A web app providing career guidance and resources based on user preferences and interests.",
         liveLink: "https://auth-moha-milon-88362.web.app/",
         githubLink: "https://github.com/AbirhossenCSE/Sports-Store-Client",
@@ -39,6 +51,31 @@ const projects = [
         challenges: "Matching users with relevant career resources dynamically.",
         futurePlans: "Integrating a chatbot for instant career advice."
     },
+    {
+        id: 5,
+        name: "Link Sharing Application",
+        image: "https://i.ibb.co.com/dw8ddv1J/Share-Link.jpg",
+        techStack: ["React.js", "Firebase", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+        description: "ShareLink is a web-based system that allows users to upload files (images, PDFs) and text, generate shareable links, and manage access settings. Users can mark their links as public (accessible by anyone) or private (requiring authentication or a password). The platform includes.",
+        liveLink: "https://sharelink-8fda4.web.app/",
+        githubLink: "https://github.com/AbirhossenCSE/Link-Sharing-System-Client",
+        githubLinkServer: "https://github.com/AbirhossenCSE/Link-Sharing-System-Server",
+        challenges: "Developing ShareLink comes with several challenges. One of the primary concerns is ensuring secure file sharing, where only authorized users can access private links. Implementing robust authentication and authorization is crucial to prevent unauthorized access. Additionally, managing access controls and link expiration adds complexity, as users may want temporary or password-protected links. Efficiently handling large file uploads without affecting performance is another challenge, requiring cloud storage solutions like Firebase Storage or AWS S3. Moreover, database optimization is necessary to retrieve and manage user-generated content efficiently. Lastly, preventing abuse and spam through rate limiting and content moderation is essential to maintaining a safe platform.",
+        futurePlans: "Looking ahead, several enhancements are planned to improve ShareLink. An analytics dashboard will be introduced to provide insights into link visits, downloads, and geographical access trends. Users will be able to generate QR codes for easier sharing and create custom shortened URLs for a more personalized experience. Another exciting addition is version control for uploaded files, allowing users to update shared files without altering the original link. Lastly, integration with cloud storage services such as Google Drive and Dropbox will be implemented, enabling seamless file uploads. These future updates aim to enhance user experience, security, and accessibility, making ShareLink a powerful tool for secure and flexible content sharing."
+    },
+    {
+        id: 6,
+        name: "Gadget Heaven",
+        image: "https://i.ibb.co.com/nqVMqqPY/gadget-Heaven.jpg",
+        techStack: ["React.js", "Firebase", "Tailwind CSS", "React Helmet Async"],
+        description: "Gadget Haven is a modern e-commerce website focused on selling electronic gadgets. It is built using ReactJS, providing a smooth and interactive user experience. The project demonstrates essential React fundamentals such as components, routing, hooks, and third-party integrations.",
+        liveLink: "https://abir-smart-shop.surge.sh/",
+        githubLink: "https://github.com/AbirhossenCSE/Gadget-Heaven",
+        githubLinkServer: "#",
+        challenges: "Building Gadget Heaven presented several challenges. One of the key difficulties was implementing a seamless and responsive UI that ensures a smooth shopping experience across all devices. Managing product data efficiently, including images, pricing, and stock availability, required careful database structuring. Another challenge was optimizing Firebase authentication to handle user sign-ins securely while ensuring a fast checkout process. Additionally, integrating a dynamic cart system and state management for handling user interactions posed some complexities. Finally, ensuring performance optimization, especially for image-heavy content, and improving SEO for better product discoverability were significant hurdles.",
+        futurePlans: "Several enhancements are planned to improve Gadget Heaven. Future updates will include an advanced search and filtering system, allowing users to find products more efficiently. A wishlist feature will be introduced to enable users to save favorite products for later. Additionally, integrating a secure payment gateway will provide a smoother checkout experience. Another major improvement will be the introduction of a review and rating system, allowing customers to share feedback on products. Lastly, implementing AI-driven recommendations will enhance personalization, helping users discover products based on their interests and browsing history."
+    },
+
 ];
 
 const Projects = () => {
@@ -65,6 +102,19 @@ const Projects = () => {
         };
     }, [selectedProject]);
 
+    useEffect(() => {
+        if (selectedProject) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+
+        return () => {
+            document.body.classList.remove("overflow-hidden");
+        };
+    }, [selectedProject]);
+
+
     return (
         <div id="projects" className="py-16 px-6 lg:px-20  text-white">
             <div className="max-w-6xl mx-auto">
@@ -85,7 +135,7 @@ const Projects = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="bg-gray-800 p-6 rounded-lg shadow-lg border border-gray-700 hover:scale-105 transition-transform duration-300
+                            className="bg-gradient-to-b from-gray-700 via-[#2c1936] to-[#170b34] p-6 rounded-lg shadow-xl hover:scale-105 transition-transform duration-300
                             relative group overflow-hidden flex flex-col justify-between"
                         >
                             {/* Image */}
