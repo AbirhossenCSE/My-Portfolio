@@ -25,7 +25,7 @@ const Contact = () => {
     const isInView = useInView(sectionRef, { triggerOnce: true, threshold: 0.2 });
 
     return (
-        <div id="contact" ref={sectionRef} className="py-16 px-6 lg:px-20 text-white  bg-opacity-50">
+        <div id="contact" ref={sectionRef} className="relative overflow-hidden text-white p-4 sm:p-6 md:p-10">
             <div className="max-w-6xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: -50 }}
@@ -82,13 +82,13 @@ const Contact = () => {
                         initial={{ opacity: 0, x: 100 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 1.2, ease: 'easeOut' }}
-                        className="shadow-xl"
+                        className="shadow-xl p-4 sm:p-6"
                     >
                         <h3 className="text-3xl font-bold mb-6 text-center">Send Message</h3>
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full p-3 rounded  text-white focus:outline-none focus:ring-2 focus:ring-blue-400" required />
-                            <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full p-3 rounded  text-white focus:outline-none focus:ring-2 focus:ring-blue-400" required />
-                            <textarea name="message" placeholder="Your Message" rows="4" value={formData.message} onChange={handleChange} className="w-full p-3 rounded  text-white focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
+                            <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" required />
+                            <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" required />
+                            <textarea name="message" placeholder="Your Message" rows="4" value={formData.message} onChange={handleChange} className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
                             <button type="submit" className="w-full inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-purple-600 transition duration-300">
                                 Send Message
                             </button>

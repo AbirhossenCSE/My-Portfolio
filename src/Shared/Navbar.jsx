@@ -22,7 +22,7 @@ const Navbar = () => {
     </>;
 
     return (
-        <nav className="fixed top-0 bg-gray-950  bg-opacity-70 shadow-md z-50">
+        <nav className="fixed top-0 bg-gray-950 w-full bg-opacity-70 shadow-md z-50">
             <div className="container mx-auto flex items-center justify-between py-3 px-6">
 
                 {/* Logo Section */}
