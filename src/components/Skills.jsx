@@ -164,7 +164,7 @@ const Skills = () => {
           {skills.map((skill, i) => (
             <div
               key={i}
-              className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 rounded-xl border border-gray-700"
+              className="bg-gradient-to-b from-[#4a326f] via-[#3a1f4f] to-[#24144d] rounded-xl border border-gray-700"
             >
               {/* Header */}
               <button
