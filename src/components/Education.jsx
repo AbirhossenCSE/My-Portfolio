@@ -239,10 +239,10 @@ const Education = () => {
               </div>
 
               {/* Card */}
-              <div className="z-10 w-2/4 p-6 bg-gradient-to-b from-[#4a326f] via-[#3a1f4f] to-[#24144d] rounded-lg shadow-lg border border-gray-600 order-2 mx-auto">
+              <div className="z-10 md:w-2/4 w-4/5 p-6 bg-gradient-to-b from-[#4a326f] via-[#3a1f4f] to-[#24144d] rounded-lg shadow-lg border border-gray-600 order-2 mx-auto">
                 <div className="flex items-center gap-3 mb-3">
                   <FaGraduationCap className="text-teal-400 text-5xl" />
-                  <h3 className="text-2xl font-bold">{edu.degree}</h3>
+                  <h3 className="md:text-2xl font-bold">{edu.degree}</h3>
                 </div>
                 <p className="text-gray-300 font-semibold">{edu.school}</p>
                 <p className="text-gray-400 text-sm mt-2">{edu.desc}</p>
