@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/Logo/Abir-formal.jpg';
+import logo2 from '../assets/Logo/abir-logo-bg.png';
 import { FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -27,12 +28,12 @@ const Navbar = () => {
 
                 {/* Logo Section */}
                 <div className="flex lg:ml-20 items-center cursor-pointer" onClick={() => handleScroll("home")}>
-                    <img className="w-8 h-8 mr-2" src={logo} alt="Logo" />
+                    <img className="w-24 h-24 mr-2" src={logo2} alt="Logo" />
                     <span className="text-3xl bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent opacity-80 font-bold transition-all duration-300 hover:opacity-100 focus:outline-none border-none">Abir Hossen</span>
                 </div>
 
                 {/* Desktop Menu */}
-                <ul className="hidden lg:flex lg:mr-20 space-x-6 text-white font-medium">
+                <ul className="hidden lg:flex lg:mr-20 space-x-6 text-white text-lg font-medium">
                     {links}
                 </ul>
 
