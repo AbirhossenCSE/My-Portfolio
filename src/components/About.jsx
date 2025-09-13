@@ -87,7 +87,7 @@ const About = () => {
           className="flex gap-8 whitespace-nowrap"
           initial={{ x: 0 }}
           animate={{ x: "-50%" }}
-          transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+          transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
         >
           {[...skills, ...skills].map((skill, i) => (
             <div

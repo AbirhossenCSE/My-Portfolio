@@ -6,13 +6,14 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleScroll = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); // sidebar close after click
-    }
-  };
+    const handleScroll = (id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setIsOpen(false);
+      }
+    };
+
 
   const links = (
     <>
@@ -24,6 +25,11 @@ const Navbar = () => {
       <li>
         <Link to="/" onClick={() => handleScroll("about")}>
           About
+        </Link>
+      </li>
+      <li>
+        <Link to="/" onClick={() => handleScroll("experience")}>
+          Experience
         </Link>
       </li>
       <li>
@@ -51,7 +57,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 bg-gray-950 w-full bg-opacity-70 shadow-md z-50">
-      <div className="container mx-auto flex items-center justify-between py-3 md:px-24 px-2">
+      <div className="container mx-auto flex items-center justify-between md:px-24 px-2">
         {/* Logo Section */}
         <div
           className="flex lg:ml-20 items-center cursor-pointer"

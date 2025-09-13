@@ -93,7 +93,7 @@ const item = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-6 lg:px-20 text-white">
+    <section id="skills" className="py-10 px-6 lg:px-20 text-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold text-center mb-16">My Skills</h2>
 
