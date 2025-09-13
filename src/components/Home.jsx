@@ -17,7 +17,7 @@ const Home = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1 }}
                     >
-                        <div className="relative w-full sm:w-80 h-auto sm:h-[500px] rounded-xl overflow-hidden border-1 p-1">
+                        <div className="relative w-full sm:w-80 h-auto sm:h-[500px] rounded-xl overflow-hidden md:border-1 p-1">
                             <motion.img
                                 src={abirImg}
                                 alt="Abir Hossen - Web Developer"
